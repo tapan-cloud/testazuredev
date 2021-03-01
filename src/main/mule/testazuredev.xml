@@ -12,5 +12,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<set-payload value="hello azure dev" doc:name="Set Payload" doc:id="910c664c-a40f-45f5-808e-9afd49b1d09b" />
 		<logger level="INFO" doc:name="Logger" doc:id="84955e14-6a71-40a7-9723-69fbb0b563c0" message="payload"/>
 		<logger level="INFO" doc:name="Logger" doc:id="00d10726-861e-4ad3-819a-348acf19f177" message="log for feature10"/>
+		<logger level="INFO" doc:name="Logger" doc:id="00d10726-861e-4ad3-819a-348acf19f177" message="log for feature20"/>
 	</flow>
 </mule>
