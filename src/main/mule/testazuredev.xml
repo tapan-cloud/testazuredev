@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="testazuredevFlow" doc:id="6c572947-6cae-486c-b57f-25263dd120be" >
 		<http:listener doc:name="Listener" doc:id="288b66ed-6e7e-4cc8-9a91-98173e3dc982" config-ref="HTTP_Listener_config" path="/azuredev"/>
 		<set-payload value="hello azure dev" doc:name="Set Payload" doc:id="910c664c-a40f-45f5-808e-9afd49b1d09b" />
+		<logger level="INFO" doc:name="Logger" doc:id="84955e14-6a71-40a7-9723-69fbb0b563c0" message="#[payload]"/>
 	</flow>
 </mule>
