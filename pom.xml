@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fc29fc36-7e7e-4054-bfb3-c8f4a0889b8f</groupId>
@@ -17,7 +15,8 @@
 
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
-	</properties>
+	<munit.version>2.3.2</munit.version>
+    </properties>
 
 	<build>
 		<plugins>
@@ -52,7 +51,30 @@
 
 				</configuration>
 			</plugin>
-		</plugins>
+		<plugin>
+                <groupId>com.mulesoft.munit.tools</groupId>
+                <artifactId>munit-maven-plugin</artifactId>
+                <version>${munit.version}</version>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                            <goal>coverage-report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <coverage>
+                        <runCoverage>true</runCoverage>
+                        <formats>
+                            <format>html</format>
+                        </formats>
+                    </coverage>
+                </configuration>
+            </plugin>
+        </plugins>
 	</build>
 
 	<dependencies>
@@ -84,7 +106,20 @@
 			<artifactId>log4j-api</artifactId>
 			<version>2.10.0</version>
 		</dependency>-->
-	</dependencies>
+		<dependency>
+            <groupId>com.mulesoft.munit</groupId>
+            <artifactId>munit-runner</artifactId>
+            <version>2.3.2</version>
+            <classifier>mule-plugin</classifier>
+            <scope>test</scope>
+        </dependency>	<dependency>
+            <groupId>com.mulesoft.munit</groupId>
+            <artifactId>munit-tools</artifactId>
+            <version>2.3.2</version>
+            <classifier>mule-plugin</classifier>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 	<repositories>
 		<repository>
