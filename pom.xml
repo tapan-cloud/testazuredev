@@ -68,7 +68,7 @@
 			<version>1.2.0</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
-		<!-- Added for Splunk -->
+		<!-- Added for Splunk 
 		<dependency>
 			<groupId>com.splunk.logging</groupId>
 			<artifactId>splunk-library-javalogging</artifactId>
@@ -83,7 +83,7 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.10.0</version>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 
 	<repositories>
@@ -99,11 +99,11 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>	
-		<repository>
+		<!--  <repository>
 			<id>splunk-artifactory</id>
 			<name>Splunk Releases</name>
 			<url>http://splunk.jfrog.io/splunk/ext-releases-local</url>
-		</repository>
+		</repository>-->
 		<repository>
         <id>mulesoft-snapshots</id>
         <name>MuleSoft Snapshot Repository</name>
