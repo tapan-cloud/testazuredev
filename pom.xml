@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fc29fc36-7e7e-4054-bfb3-c8f4a0889b8f</groupId>
-	<artifactId>testazuredev</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<groupId>b6a3c5a8-20db-4b88-89c9-95dfbef38f56</groupId>
+	<artifactId>testazureuat</artifactId>
+	<version>3.0.0</version>
 	<packaging>mule-application</packaging>
 
-	<name>testazuredev</name>
+	<name>testazureuat</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,14 +38,14 @@
 						<password>${anypoint.password}</password>
 						<applicationName>${project.name}</applicationName>
 						<!--<businessGroup>${cloudhub.bg}</businessGroup>  -->
-						<environment>${cloudhub.environment}</environment>
+						<environment>Sandbox</environment>
 						<region>us-east-2</region>
 						<workers>1</workers>
 						<workerType>MICRO</workerType>
-						<!-- Adding properties to add at runtime -->
+						<!-- Adding properties to add at runtime
 						<properties>
 							<env>${env}</env>
-						</properties>
+						</properties> -->
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 
@@ -112,7 +112,8 @@
             <version>2.3.2</version>
             <classifier>mule-plugin</classifier>
             <scope>test</scope>
-        </dependency>	<dependency>
+        </dependency>	
+        <dependency>
             <groupId>com.mulesoft.munit</groupId>
             <artifactId>munit-tools</artifactId>
             <version>2.3.2</version>
